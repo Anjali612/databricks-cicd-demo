@@ -5,8 +5,8 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: echo "Starting Databricks CI/CD Pipeline"
-  displayName: 'Start Pipeline'
+- script: echo "Starting Pipeline"
 
-- script: echo "Deploying notebooks"
-  displayName: 'Deploy Step'
+- script: |
+    databricks workspace import_dir notebooks /Shared/notebooks
+  displayName: 'Deploy notebooks'
