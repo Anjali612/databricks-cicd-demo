@@ -1,0 +1,12 @@
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- script: echo "Starting Databricks CI/CD Pipeline"
+  displayName: 'Start Pipeline'
+
+- script: echo "Deploying notebooks"
+  displayName: 'Deploy Step'
